@@ -46,7 +46,7 @@ jobs:
       - name: Check whether publishing enabled
         id: publish
         env:
-          ENABLE_PUBLISH: ${{ secrets.ACRYL_DOCKER_PASSWORD }}
+          ENABLE_PUBLISH: ${{ secrets.DOCKER_PASSWORD }}
         run: |
           if [[ -n "$ENABLE_PUBLISH" && "${{ github.repository }}" == "acryldata/datahub-actions" ]]; then
             echo "Publishing is enabled"
