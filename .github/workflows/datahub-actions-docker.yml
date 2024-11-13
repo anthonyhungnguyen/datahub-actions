@@ -45,7 +45,7 @@ jobs:
           echo "tracking_tag=$TRACKING_TAG" >> "$GITHUB_OUTPUT"
   regular_image:
     name: Build & Push Image to DockerHub
-    if: ${{ needs.setup.outputs.publish == 'true' }} # Only build the regular image if publishing is enabled
+    if: true
     runs-on: ubuntu-latest
     needs: setup
     steps:
