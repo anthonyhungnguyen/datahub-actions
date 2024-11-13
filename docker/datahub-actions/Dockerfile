@@ -15,7 +15,7 @@
 # Defining environment
 ARG APP_ENV=prod
 
-FROM phuchung276/datahub-ingestion-ghn:master AS base
+FROM phuchung276/datahub-ingestion-base-ghn:master AS base
 
 USER root
 
