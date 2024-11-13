@@ -77,7 +77,7 @@ jobs:
           file: ./docker/datahub-actions/Dockerfile
           platforms: ${{ needs.setup.outputs.publish == 'true' && 'linux/amd64,linux/arm64' || 'linux/amd64' }}
           tags: phuchung276/datahub-actions:head
-          push: ${{ needs.setup.outputs.publish == 'true' }}
+          push: true
           cache-from: type=registry,ref=${{ steps.docker_meta.outputs.tags }}
           cache-to: type=inline
           target: final
